@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Glass</title>
+    <style>
+        .pageContainer {
+            height: auto;
+            width: 100%;
+            display:grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: minmax(100px, 200px) minmax(25px, 50px) 1fr minmax(100px, 250px);
+            grid-template-areas:
+            "header"
+            "navBar"
+            "mainBody"
+            "footer";
+        }
+
+        .mainBody {
+            display: grid:
+            grid-template-columns: minmax(100px, 200px) 1fr minmax(100px, 200px);
+            grid-template-rows: 1fr;
+            grid-template-areas:
+            "lefPad mainContent rightPad";
+        }
+
+    </style>
+</head>
+<body style="background: grey;">
+<div class="pageContainer" style="background: red;">
+    <div class="pageHeader" style="background: blue; grid-area: header;">
+Header
+    </div>
+    <div class="navBar" style="background: purple; grid-area: navBar;">
+NavBar
+    </div>
+
+    <div class="mainBody" style="background: grey; grid-area: mainBody;">
+        <div class="leftPad" style="background: green; grid-area:leftPad;">LeftPad</div>
+        <div class="mainContent" style="background: yellow; grid-area:mainContent">MainContent</div>
+        <div class="rightPad" style="background: green; grid-area:rightPad">RightPad</div>
+    </div>
+    <div class="footer" style="bacground: red; grid-area:footer">Footer</div>
+</div>
+</body>
+</html>
