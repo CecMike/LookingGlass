@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <style>
+.container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas:
+  "navBar navBar navBar"
+  "header header header"
+  "sideLeft main sideRight"
+  "footer footer footer";
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 50px 150px minmax(460px, auto) 80px;
+}
+.container > div {
+  border: 1px dashed #888;
+}
+
+.navBar {
+  grid-area: navBar;
+}
+.header {
+  grid-area: header;
+}
+.sideLeft {
+  grid-area: sideLeft;
+}
+.main {
+  grid-area: main;
+  background-color: green;
+  position: relative;
+}
+.sideRight {
+  grid-area: sideRight;
+}
+.footer {
+  grid-area: footer;
+}
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="navBar">navBar</div>
+    <div class="header">header</div>
+    <div class="sideLeft"></div>
+    <div class="main">main</div>
+    <div class="sideRight"></div>
+    <div class="footer">footer</div>
+</div>
+</body>
+
+</html>
